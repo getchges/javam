@@ -1,18 +1,7 @@
-//8. Program to demonstrate nested exception.
-
 package question8;
 public class NestedException
 {
-	
-	
-	
-	// Method to perform division
-    public static int divide(int num, int den) {
-        return num / den;
-    }
-    
-	
-    public static void main(String[] args) 
+	public static void main(String[] args) 
     {
         try 
         {
@@ -21,11 +10,14 @@ public class NestedException
         }
         catch (ArrayIndexOutOfBoundsException e) 
         {
+        	int a=10;
+        	int b=0;
             try 
             {
                 // Attempting to perform a division operation which may cause ArithmeticException
-                int result = divide(10, 0);
-                System.out.println("Result of division: " + result);
+                
+                int c=a/b;
+                //System.out.println("division:"+c);
             } 
             catch (ArithmeticException ex) {
                 // Handling the ArithmeticException and throwing a new exception with nested exception
